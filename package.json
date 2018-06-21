@@ -4,7 +4,8 @@
   "description": "JavaScript Exploration",
   "main": "read-sheet.js",
   "dependencies": {
-    "googleapis": "^32.0.0"
+    "googleapis": "^32.0.0",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {},
   "scripts": {

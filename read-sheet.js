@@ -3,6 +3,12 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+const argv = require('yargs')
+    .option('sheetid', {
+      alias: 's',
+      default: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+    })
+    .argv;
 
 // If modifying these scopes, delete credentials.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -74,8 +80,7 @@ function getNewToken(oAuth2Client, callback) {
 function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
-    // spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-    spreadsheetId: '1IT7VCR7Z3pXGe6dTpmwFWBjI-N4GwegnveOiDrxjkvM',
+    spreadsheetId: argv.sheetid,
     range: 'Class Data!A2:E',
   }, (err, {data}) => {
     if (err) return console.log('The API returned an error: ' + err);
