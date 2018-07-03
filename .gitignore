@@ -1,5 +1,5 @@
 # sqlite database
-db.sqlite
+*.sqlite
 
 # Credentials
 client_secret.json
