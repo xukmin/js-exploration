@@ -1,3 +1,6 @@
+# sqlite database
+db.sqlite
+
 # Credentials
 client_secret.json
 credentials.json
