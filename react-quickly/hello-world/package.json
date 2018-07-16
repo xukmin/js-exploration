@@ -1,0 +1,15 @@
+{
+  "name": "hello-react",
+  "version": "1.0.0",
+  "description": "Hello World with React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Min Xu (xukmin@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
