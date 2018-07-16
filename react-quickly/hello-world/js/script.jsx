@@ -1,10 +1,6 @@
 class HelloWorld extends React.Component {
   render() {
-    return React.createElement(
-        'h1',
-        this.props,
-        `Hello, ${this.props.frameworkName} world!`
-    );
+    return <h1>Hello, {this.props.frameworkName} world!</h1>;
   }
 }
 

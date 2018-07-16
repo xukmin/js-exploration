@@ -8,6 +8,11 @@
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC",
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1"
