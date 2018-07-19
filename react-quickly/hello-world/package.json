@@ -4,7 +4,8 @@
   "description": "Hello World with React.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel js/script.jsx -o js/script.js"
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC",
