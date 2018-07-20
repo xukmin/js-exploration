@@ -7,7 +7,9 @@ class DateTimeNow extends React.Component {
 
 class HelloWorld extends React.Component {
   render() {
-    return <h1>Hello, {this.props.frameworkName} world!</h1>;
+    return <h1 {...this.props}>
+      Hello, {this.props.frameworkName} world!
+    </h1>;
   }
 }
 
