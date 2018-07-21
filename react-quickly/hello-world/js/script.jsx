@@ -1,10 +1,3 @@
-class DateTimeNow extends React.Component {
-  render() {
-    const dateTimeNow = new Date().toLocaleString();
-    return <span>Current date and time is {dateTimeNow}.</span>;
-  }
-}
-
 class HelloWorld extends React.Component {
   render() {
     return <h1 {...this.props}>
@@ -30,7 +23,7 @@ ReactDOM.render(
         frameworkName='Angular.js'
         title='Superheroic JavaScript MVW Framework.'
       />
-      <DateTimeNow />
+      Current time is <Clock/>.
     </div>,
     document.getElementById('content')
 );

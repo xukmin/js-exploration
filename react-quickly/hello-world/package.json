@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel js/script.jsx -o js/script.js"
+    "build-clock": "babel js/clock.jsx -o js/clock.js",
+    "build-script": "babel js/script.jsx -o js/script.js",
+    "build": "npm run build-clock && npm run build-script"
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC",
