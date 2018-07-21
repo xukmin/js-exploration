@@ -18,6 +18,6 @@ class Clock extends React.Component {
 
   render() {
     console.log('Rendering clock...');
-    return <div>{this.state.currentTime}</div>;
+    return <span>{this.state.currentTime}</span>;
   }
 }
