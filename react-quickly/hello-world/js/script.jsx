@@ -23,7 +23,7 @@ ReactDOM.render(
         frameworkName='Angular.js'
         title='Superheroic JavaScript MVW Framework.'
       />
-      Current time is <Clock/>.
+      Current time is <Clock/>
     </div>,
     document.getElementById('content')
 );

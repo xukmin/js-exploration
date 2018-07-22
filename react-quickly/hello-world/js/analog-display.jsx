@@ -25,23 +25,23 @@ function AnalogDisplay(props) {
     position: 'relative',
     top: 100,
     left: 100,
-    border: '1px solid grey',
+    border: '1px solid green',
     width: '40%',
     height: 3,
     transform: `rotate(${date.getMinutes() / 60 * 360 - 90}deg)`,
     transformOrigin: '0% 0%',
-    backgroundColor: 'grey'
+    backgroundColor: 'green'
   };
   const hourHandStyle = {
     position: 'relative',
     top: 100,
     left: 100,
-    border: '1px solid grey',
+    border: '1px solid blue',
     width: '20%',
     height: 7,
     transform: `rotate(${date.getHours() / 12 * 360 - 90}deg)`,
     transformOrigin: '0% 0%',
-    backgroundColor: 'grey'
+    backgroundColor: 'blue'
   };
   return <div>
     <div style={dialStyle}>
