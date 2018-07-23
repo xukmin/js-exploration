@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-analog": "babel js/analog-display.jsx -o js/analog-display.js",
-    "build-digital": "babel js/digital-display.jsx -o js/digital-display.js",
-    "build-clock": "babel js/clock.jsx -o js/clock.js",
-    "build-script": "babel js/script.jsx -o js/script.js",
+    "build-analog": "babel jsx/analog-display.jsx -o js/analog-display.js",
+    "build-digital": "babel jsx/digital-display.jsx -o js/digital-display.js",
+    "build-clock": "babel jsx/clock.jsx -o js/clock.js",
+    "build-script": "babel jsx/script.jsx -o js/script.js",
     "build": "npm run build-analog && npm run build-digital && npm run build-clock && npm run build-script"
   },
   "author": "Min Xu (xukmin@gmail.com)",
