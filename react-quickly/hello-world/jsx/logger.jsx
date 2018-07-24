@@ -43,6 +43,6 @@ class Logger extends React.Component {
 
   render() {
     console.log('rendering...');
-    return <div>{this.props.time}</div>;
+    return <div>Logger: {this.props.time}</div>;
   }
 }

@@ -21,14 +21,7 @@ class Clock extends React.Component {
     return <div>
       <AnalogDisplay time={this.state.currentTime}/>
       <DigitalDisplay time={this.state.currentTime}/>
+      <Logger time={this.state.currentTime}/>
     </div>;
-  }
-
-  componentWillMount() {
-    console.log('componentWillMount: ' + ReactDOM.findDOMNode(this));
-  }
-
-  componentDidMount() {
-    console.log('componentDidMount: ' + ReactDOM.findDOMNode(this));
   }
 }
