@@ -10,7 +10,8 @@
     "build-clock": "babel jsx/clock.jsx -o js/clock.js",
     "build-logger": "babel jsx/logger.jsx -o js/logger.js",
     "build-script": "babel jsx/script.jsx -o js/script.js",
-    "build": "npm run build-analog && npm run build-digital && npm run build-clock && npm run build-logger && npm run build-script"
+    "build-users": "babel jsx/users.jsx -o js/users.js",
+    "build": "npm run build-analog && npm run build-digital && npm run build-clock && npm run build-logger && npm run build-users && npm run build-script "
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC",

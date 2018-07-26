@@ -8,6 +8,7 @@ class HelloWorld extends React.Component {
 
 ReactDOM.render(
     <div>
+      <Users data-url='../users/real-user-data.json'/>
       <HelloWorld
         id='react'
         frameworkName='React.js'
