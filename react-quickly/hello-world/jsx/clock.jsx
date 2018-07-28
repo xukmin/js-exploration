@@ -9,7 +9,6 @@ class Clock extends React.Component {
 
   launchClock() {
     setInterval(() => {
-      console.log('Updating time...');
       this.setState({
         currentTime: (new Date()).toLocaleString()
       })
@@ -17,7 +16,6 @@ class Clock extends React.Component {
   }
 
   render() {
-    console.log('Rendering clock...');
     return <div>
       <AnalogDisplay time={this.state.currentTime}/>
       <DigitalDisplay time={this.state.currentTime}/>
