@@ -9,7 +9,15 @@
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel jsx -d js -w"
+  },
+  "author": "Min Xu (xukmin@gmail.com)",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "react"
+    ]
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC"
