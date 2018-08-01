@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel jsx -d js -w"
+    "build-button": "babel jsx/button.jsx -o js/button.js",
+    "build": "npm run build-button"
   },
   "author": "Min Xu (xukmin@gmail.com)",
   "license": "ISC",
