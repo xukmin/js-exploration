@@ -41,7 +41,7 @@ class SaveButton extends React.Component {
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}
         className={this.state.className}>
-      Saved {this.state.count} {this.state.count == 1 ? 'time' : 'times'}
+      Clicked {this.state.count} {this.state.count == 1 ? 'time' : 'times'}
     </button>;
   }
 }
