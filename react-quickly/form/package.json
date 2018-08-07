@@ -4,7 +4,10 @@
   "description": "React Forms.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-content": "babel jsx/content.jsx -o js/content.js",
+    "build-script": "babel jsx/script.jsx -o js/script.js",
+    "build": "npm run build-content & npm run build-script"
   },
   "babel": {
     "presets": [
