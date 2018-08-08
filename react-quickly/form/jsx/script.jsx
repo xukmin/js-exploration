@@ -1,4 +1,4 @@
 ReactDOM.render(
-  <SaveButton />,
+  <Content />,
   document.getElementById('content')
 );
