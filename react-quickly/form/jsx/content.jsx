@@ -2,12 +2,14 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.handleRadio = this.handleRadio.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
     this.state = {
       radioGroup: {
         angular: false,
         react: true,
         polymer: false
-      }
+      },
+      selectedValue: 'node'
     };
   }
 
@@ -19,15 +21,22 @@ class Content extends React.Component {
       polymer: false
     };
     radioGroup[event.target.value] = event.target.checked;
-    this.setState((prevState, props) => {
-      return Object.assign(prevState, {
-        radioGroup: radioGroup
-      });
-    });
+    this.setState((prevState, props) =>
+      Object.assign(prevState, {radioGroup: radioGroup})
+    );
+  }
+
+  handleSelectChange(event) {
+    console.log(`selected ${event.target.value}`);
+    const selectedValue = event.target.value;
+    this.setState((prevState, props) =>
+      Object.assign(prevState, {selectedValue: selectedValue})
+    );
   }
 
   render() {
     return <form>
+      What is your favorite JavaScript framework?<br/>
       <input type='radio'
         name='radioGroup'
         value='angular'
@@ -46,6 +55,14 @@ class Content extends React.Component {
         checked={this.state.radioGroup['polymer']}
         onChange={this.handleRadio}/>
       Polymer<br/>
+      What is your favorite programming language?<br/>
+      <select
+        value={this.state.selectedValue}
+        onChange={this.handleSelectChange}>
+        <option value='ruby'>Ruby</option>
+        <option value='node'>Node</option>
+        <option value='python'>Python</option>
+      </select>
     </form>;
   }
 }
