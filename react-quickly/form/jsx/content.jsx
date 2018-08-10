@@ -3,13 +3,16 @@ class Content extends React.Component {
     super(props);
     this.handleRadio = this.handleRadio.bind(this);
     this.handleSelectChange = this.handleSelectChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       radioGroup: {
         angular: false,
         react: true,
         polymer: false
       },
-      selectedValue: 'node'
+      selectedValue: 'node',
+      email: ''
     };
   }
 
@@ -32,6 +35,18 @@ class Content extends React.Component {
     this.setState((prevState, props) =>
       Object.assign(prevState, {selectedValue: selectedValue})
     );
+  }
+
+  handleEmailChange(event) {
+    console.log(`email = ${event.target.value}`);
+    const email = event.target.value;
+    this.setState((prevState, props) =>
+      Object.assign(prevState, {email: email})
+    );
+  }
+
+  handleSubmit(event) {
+    console.log(`submit = ${JSON.stringify(this.state)}`);
   }
 
   render() {
@@ -63,6 +78,15 @@ class Content extends React.Component {
         <option value='node'>Node</option>
         <option value='python'>Python</option>
       </select>
+      <br/>
+      Your email address:
+      <input type='text'
+        name='email'
+        onChange={this.handleEmailChange}/>
+      <br/>
+      <input type='button'
+        onClick={this.handleSubmit}
+        value='Submit'/>
     </form>;
   }
 }
