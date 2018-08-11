@@ -3,6 +3,8 @@ class Content extends React.Component {
     super(props);
     this.handleRadio = this.handleRadio.bind(this);
     this.handleSelectChange = this.handleSelectChange.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
@@ -12,18 +14,27 @@ class Content extends React.Component {
         polymer: false
       },
       selectedValue: 'node',
+      name: '',
+      phone: '',
       email: ''
     };
   }
 
   handleRadio(event) {
-    console.log(`value = ${event.target.value}, checked = ${event.target.checked}`);
+    console.log(
+        `value = ${event.target.value}, checked = ${event.target.checked}`);
     let radioGroup = {
       angular: false,
       react: false,
       polymer: false
     };
+
     radioGroup[event.target.value] = event.target.checked;
+    // Alternatively, use Object.assign() and Symbol() to update radioGroup:
+    // radioGroup = Object.assign(radioGroup, {
+    //   [Symbol(event.target.value)]: event.target.checked
+    // });
+
     this.setState((prevState, props) =>
       Object.assign(prevState, {radioGroup: radioGroup})
     );
@@ -37,9 +48,26 @@ class Content extends React.Component {
     );
   }
 
+  // Makes name all capitalized.
+  handleNameChange(event) {
+    console.log(`name = ${event.target.value}`);
+    const name = event.target.value.toUpperCase();
+    this.setState((prevState, props) =>
+      Object.assign(prevState, {name: name})
+    );
+  }
+
+  handlePhoneChange(event) {
+    console.log(`phone = ${event.target.value}`);
+    const phone = event.target.value.replace(/[^0-9]/ig, '');
+    this.setState((prevState, props) =>
+      Object.assign(prevState, {phone: phone})
+    );
+  }
+
   handleEmailChange(event) {
-    console.log(`email = ${event.target.value}`);
     const email = event.target.value;
+    console.log(`email = ${email}`);
     this.setState((prevState, props) =>
       Object.assign(prevState, {email: email})
     );
@@ -79,9 +107,25 @@ class Content extends React.Component {
         <option value='python'>Python</option>
       </select>
       <br/>
+      Your name:
+      <input type='text'
+        name='name'
+        placeholder='FIRST LAST'
+        value={this.state.name}
+        onChange={this.handleNameChange}/>
+      <br/>
+      Your phone number:
+      <input type='text'
+        name='phone'
+        placeholder='1234567890'
+        value={this.state.phone}
+        onChange={this.handlePhoneChange}/>
+      <br/>
       Your email address:
       <input type='text'
         name='email'
+        placeholder='yourname@email.com'
+        value={this.state.email}
         onChange={this.handleEmailChange}/>
       <br/>
       <input type='button'
