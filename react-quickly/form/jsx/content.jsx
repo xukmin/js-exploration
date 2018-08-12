@@ -81,23 +81,26 @@ class Content extends React.Component {
     return <form>
       What is your favorite JavaScript framework?<br/>
       <input type='radio'
+        id='angular'
         name='radioGroup'
         value='angular'
         checked={this.state.radioGroup['angular']}
         onChange={this.handleRadio}/>
-      Angular<br/>
+      <label htmlFor='angular'>Angular</label><br/>
       <input type='radio'
+        id='react'
         name='radioGroup'
         value='react'
         checked={this.state.radioGroup['react']}
         onChange={this.handleRadio}/>
-      React<br/>
+      <label htmlFor='react'>React</label><br/>
       <input type='radio'
+        id='polymer'
         name='radioGroup'
         value='polymer'
         checked={this.state.radioGroup['polymer']}
         onChange={this.handleRadio}/>
-      Polymer<br/>
+      <label htmlFor='polymer'>Polymer</label><br/>
       What is your favorite programming language?<br/>
       <select
         value={this.state.selectedValue}
